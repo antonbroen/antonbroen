@@ -2663,10 +2663,11 @@ input, select, textarea {
 	}
 
 		a.image img {
-			-moz-transition: -moz-transform 0.2s ease-out;
-			-webkit-transition: -webkit-transform 0.2s ease-out;
-			-ms-transition: -ms-transform 0.2s ease-out;
-			transition: transform 0.2s ease-out;
+			-moz-transition: -moz-transform 0.2s ease-out, filter 0.2s ease-in;
+			-webkit-transition: -webkit-transform 0.2s ease-out, filter 0.2s ease-in;
+			-ms-transition: -ms-transform 0.2s ease-out, filter 0.2s ease-in;
+			transition: transform 0.2s ease-out, filter 0.2s ease-in;
+			filter: brightness(0.7); /* Adjusts the brightness slightly */
 		}
 
 		a.image:hover img {
@@ -2674,6 +2675,7 @@ input, select, textarea {
 			-webkit-transform: scale(1.05);
 			-ms-transform: scale(1.05);
 			transform: scale(1.05);
+			filter: brightness(1); /* Sets the brightness to normal on hover */
 		}
 
 /* Actions */
@@ -4386,7 +4388,7 @@ input, select, textarea {
 	#copyright {
 		color: #ffffff;
 		position: relative;
-		color: rgba(255, 255, 255, 0.25);
+		color: rgba(255, 255, 255, 0.747);
 		cursor: default;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 0.8rem;
@@ -4407,7 +4409,7 @@ input, select, textarea {
 
 		#copyright a {
 			color: #ffffff;
-			border-bottom-color: rgba(255, 255, 255, 0.5);
+			border-bottom-color: rgb(247, 247, 247);
 		}
 
 			#copyright a:hover {
@@ -4428,7 +4430,7 @@ input, select, textarea {
 		}
 
 		#copyright code {
-			background: rgba(255, 255, 255, 0.075);
+			background: rgba(255, 255, 255, 0.637);
 			border-color: #ffffff;
 		}
 
@@ -4687,4 +4689,15 @@ input, select, textarea {
 			visibility: visible;
 		}
 
+	}
+
+	.custom-paragraph {
+		/* Add the styles you want the paragraph to inherit */
+		color: #000000;
+		font-style: italic;
+		font-size: 0.8rem;
+		line-height: 1.5;
+		margin: 0 0 10px;
+		font-family: "Merriweather", Georgia, serif;
+		/* Add any other styles you want to apply */
 	}
